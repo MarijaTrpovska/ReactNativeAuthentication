@@ -5,7 +5,8 @@ function IconButton({ icon, color, size, onPress }) {
   return (
     <Pressable
       style={({ pressed }) => [styles.button, pressed && styles.pressed]}
-      onPress={onPress}
+      onPressIn={onPress}
+     /*  hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }} */
     >
       <Ionicons name={icon} color={color} size={size} />
     </Pressable>
